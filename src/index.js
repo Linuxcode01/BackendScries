@@ -1,19 +1,15 @@
-import mongoose, { connect } from "mongoose";
-import { DB_NAME } from "./constants.js";
-import express from 'express'
-import dotenv from 'dotenv';
-import connectDB from './db/index.js'
-const app = express();
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
+import { app } from './app.js'
+
 dotenv.config({
-    path:'./env'
+    path:'./.env'
 })
 
 connectDB()
 .then(() => {
     app.listen(process.env.PORT || 8000, ()=>{
-        console.log("server is running ");
-        console.log(process.env.PORT);
-        console.log(process.env.MONGODB_URL);
+        console.log(`server is running index ${process.env.PORT}`);
  
     })
 }).catch((err) => {
