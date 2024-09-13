@@ -1,8 +1,6 @@
 import {v2 as cloudinary} from 'cloudinary';
-import fs from 'nodejs'
+import fs from 'fs'
 
-
-import { v2 as cloudinary } from 'cloudinary';
 import { configDotenv } from 'dotenv';
 
     // Configuration
